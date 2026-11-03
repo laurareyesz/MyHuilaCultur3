@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Huila Culture: Complete the Sentences</title>
+<style>
+:root{--night:#2b1b5a;--magenta:#e6247b;--sun:#ffb81c;--teal:#12b5a6;--paper:#fff8ec;--ink:#2a2140;--ok:#0f9d6b;--bad:#d6362f}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Trebuchet MS","Segoe UI",Verdana,sans-serif;color:var(--ink);
+background:linear-gradient(160deg,var(--night),#5a1f7a 55%,var(--magenta));display:flex;align-items:center;justify-content:center;padding:16px}
+.card{width:100%;max-width:640px;background:var(--paper);border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.banner{display:block;width:100%;height:auto}
+.body{padding:20px 24px 26px}
+h1{margin:0 0 4px;font-size:1.45rem;color:var(--night)}
+.sub{margin:0 0 14px;color:#6b5f86;font-size:.95rem}
+.bar{height:12px;background:#ecdff5;border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--sun),var(--magenta));transition:width .4s}
+.meta{display:flex;justify-content:space-between;font-size:.85rem;margin:6px 2px 14px;color:#6b5f86}
+.scene{width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.8rem;margin:0 auto 12px;background:var(--sun);box-shadow:0 0 0 6px #fff,0 0 0 10px var(--teal)}
+.q{font-size:1.4rem;line-height:1.45;text-align:center;margin:12px 0 18px;font-weight:700;color:var(--night)}
+.blank{display:inline-block;min-width:110px;border-bottom:4px dashed var(--magenta);color:var(--magenta);padding:0 6px}
+.blank.ok{color:var(--ok);border-color:var(--ok)}.blank.bad{color:var(--bad);border-color:var(--bad)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{font:inherit;font-size:1.05rem;font-weight:700;padding:14px 10px;border-radius:16px;border:3px solid #e3d5ee;background:#fff;color:var(--night);cursor:pointer;transition:transform .1s,border-color .15s}
+.opt:hover:not(:disabled){border-color:var(--teal);transform:translateY(-2px)}
+.opt.sel{border-color:var(--magenta);background:#ffe9f3}
+.opt.ok{border-color:var(--ok);background:#dff7ec}.opt.bad{border-color:var(--bad);background:#fde5e3}
+.opt:disabled{cursor:default}
+.fb{min-height:58px;margin:16px 0 4px;padding:10px 14px;border-radius:14px;font-size:1rem;display:none}
+.fb.show{display:block}.fb.ok{background:#dff7ec;color:#075c3f}.fb.bad{background:#fde5e3;color:#8a1d18}
+.go{display:block;width:100%;margin-top:12px;font:inherit;font-size:1.15rem;font-weight:700;padding:14px;border:0;border-radius:16px;background:var(--magenta);color:#fff;cursor:pointer;box-shadow:0 5px 0 #a3125a}
+.go:active{transform:translateY(3px);box-shadow:0 2px 0 #a3125a}
+.go:disabled{background:#cdbfd9;box-shadow:0 5px 0 #a99bb8;cursor:not-allowed}
+:focus-visible{outline:4px solid var(--sun);outline-offset:2px}
+.end{text-align:center}.score{font-size:3.4rem;font-weight:800;color:var(--magenta);margin:6px 0}
+.stars{font-size:2rem;letter-spacing:4px}
+.end p{font-size:1.1rem;line-height:1.5}
+.hidden{display:none}
+@media(max-width:440px){.opts{grid-template-columns:1fr}.q{font-size:1.2rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="card">
+<svg class="banner" viewBox="0 0 640 150" role="img" aria-label="Mountains, sun and colorful Sanjuanero skirts of Huila">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a59"/><stop offset="1" stop-color="#ffb81c"/></linearGradient></defs>
+<rect width="640" height="150" fill="url(#sky)"/>
+<circle cx="500" cy="52" r="30" fill="#fff3c4"/>
+<path d="M0 120 L90 50 L150 95 L240 30 L330 110 L420 60 L520 115 L600 70 L640 95 V150 H0Z" fill="#6b2d8c"/>
+<path d="M0 135 L110 90 L200 125 L320 85 L430 130 L540 95 L640 130 V150 H0Z" fill="#2b1b5a"/>
+<g transform="translate(60 98)"><path d="M0 0 L30 0 L44 40 L-14 40Z" fill="#e6247b"/><path d="M-14 40 L44 40 L48 46 L-18 46Z" fill="#12b5a6"/><circle cx="15" cy="-8" r="8" fill="#f2c9a0"/><path d="M0 -12 Q15 -26 30 -12Z" fill="#2a2140"/></g>
+<g transform="translate(150 100)"><path d="M0 0 L30 0 L44 38 L-14 38Z" fill="#ffffff"/><path d="M-14 38 L44 38 L48 44 L-18 44Z" fill="#e6247b"/><circle cx="15" cy="-8" r="8" fill="#e8b48a"/><path d="M-6 -14 Q15 -34 36 -14Z" fill="#c98b3c"/></g>
+<text x="320" y="38" text-anchor="middle" font-family="Trebuchet MS,Verdana,sans-serif" font-weight="800" font-size="26" fill="#fff" stroke="#2b1b5a" stroke-width="5" paint-order="stroke">¡Viva el Huila!</text>
+</svg>
+
+<section class="body" id="quiz">
+<h1>My Huila Culture: Complete the Sentences</h1>
+<p class="sub">Choose the best word for each blank.</p>
+<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="bar"><div class="fill" id="fill"></div></div>
+<div class="meta"><span id="count">Question 1 of 10</span><span id="pts">Score: 0</span></div>
+<div class="scene" id="scene" aria-hidden="true">🎉</div>
+<p class="q" id="q"></p>
+<div class="opts" id="opts"></div>
+<div class="fb" id="fb" role="status" aria-live="polite"></div>
+<button class="go" id="go" disabled>Check answer</button>
+</section>
+
+<section class="body end hidden" id="end">
+<div class="scene" aria-hidden="true">🏆</div>
+<div class="stars" id="stars"></div>
+<div class="score" id="final"></div>
+<p id="msg"></p>
+<button class="go" id="again">Play again</button>
+</section>
+</main>
+
+<script>
+const DATA=[
+{e:"🎉",t:"The San Pedro Festival is a traditional ___ in Huila.",a:"celebration",o:["celebration","instrument","material","clothing"],h:"A festival is a big party where people celebrate together."},
+{e:"💃",t:"The Sanjuanero is a traditional Colombian ___.",a:"dance",o:["dance","hat","craft","food"],h:"Couples move to the music in the Sanjuanero Huilense. It is something you do with your body!"},
+{e:"👗",t:"Traditional costumes can be very ___ and colorful.",a:"beautiful",o:["beautiful","wooden","wool","straw"],h:"We need an adjective to describe how the costumes look. Wood, wool and straw are materials."},
+{e:"👘",t:"Dancers wear colorful traditional ___ at the festival.",a:"clothing",o:["clothing","music","wood","festival"],h:"Think about what people wear: skirts, shirts and dresses are clothing."},
+{e:"👒",t:"The famous hat from Suaza is made of ___.",a:"straw",o:["straw","wool","wood","cotton"],h:"Traditional hats are woven from dry plant fibers, called straw."},
+{e:"🏺",t:"Many Huila crafts are ___ by local artisans.",a:"handmade",o:["handmade","noisy","dangerous"],h:"Artisans use their hands to make crafts. We say they are handmade."},
+{e:"🎸",t:"The tiple and the guitar are traditional musical ___.",a:"instruments",o:["instruments","materials","clothing","festivals"],h:"You play a guitar to make music, so it is an instrument."},
+{e:"🎶",t:"The bambuco is very ___ in Huila, and many people dance it.",a:"popular",o:["popular","wooden","straw"],h:"If many people like and enjoy something, it is popular."},
+{e:"🧶",t:"A warm ruana is made of soft ___.",a:"wool",o:["wool","wood","straw","cotton"],h:"Wool comes from sheep and keeps you warm in the cold mountains."},
+{e:"🪵",t:"Artisans carve small animals and masks from ___.",a:"wood",o:["wood","wool","cotton","straw"],h:"You can carve a solid material from a tree. It is wood."}
+];
+const $=id=>document.getElementById(id);
+let i=0,score=0,sel=null,checked=false,order=[];
+const shuffle=a=>{a=a.slice();for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a};
+
+function show(){
+  const d=DATA[i];sel=null;checked=false;
+  $("count").textContent="Question "+(i+1)+" of "+DATA.length;
+  $("pts").textContent="Score: "+score;
+  $("scene").textContent=d.e;
+  const parts=d.t.split("___");
+  $("q").innerHTML="";
+  $("q").append(parts[0]);
+  const b=document.createElement("span");b.className="blank";b.id="blank";b.textContent="\u00a0";
+  $("q").append(b,parts[1]||"");
+  $("opts").innerHTML="";
+  shuffle(d.o).forEach(w=>{
+    const btn=document.createElement("button");btn.className="opt";btn.textContent=w;btn.dataset.w=w;
+    btn.onclick=()=>{if(checked)return;sel=w;document.querySelectorAll(".opt").forEach(x=>x.classList.toggle("sel",x===btn));
+      b.textContent=w;$("go").disabled=false};
+    $("opts").append(btn);
+  });
+  const fb=$("fb");fb.className="fb";fb.textContent="";
+  $("go").textContent="Check answer";$("go").disabled=true;
+  $("fill").style.width=(i/DATA.length*100)+"%";
+  $("bar").setAttribute("aria-valuenow",i);
+}
+
+function check(){
+  const d=DATA[i];checked=true;
+  const right=sel===d.a;
+  if(right)score++;
+  document.querySelectorAll(".opt").forEach(x=>{
+    x.disabled=true;x.classList.remove("sel");
+    if(x.dataset.w===d.a)x.classList.add("ok");
+    else if(x.dataset.w===sel)x.classList.add("bad");
+  });
+  const bl=$("blank");bl.textContent=d.a;bl.classList.add(right?"ok":"bad");
+  const fb=$("fb");fb.className="fb show "+(right?"ok":"bad");
+  fb.textContent=right?"✅ Great job! “"+d.t.replace("___",d.a)+"”":"❌ Not quite. The correct word is “"+d.a+"”. Hint: "+d.h;
+  $("pts").textContent="Score: "+score;
+  $("fill").style.width=((i+1)/DATA.length*100)+"%";
+  $("go").textContent=i===DATA.length-1?"See my results":"Next question";
+}
+
+function finish(){
+  $("quiz").classList.add("hidden");$("end").classList.remove("hidden");
+  $("final").textContent=score+" / "+DATA.length;
+  const s=score>=9?3:score>=6?2:1;
+  $("stars").textContent="⭐".repeat(s)+"☆".repeat(3-s);
+  $("msg").textContent=score>=9?"Excellent! You know the culture of Huila very well. ¡Muy bien!"
+    :score>=6?"Good work! You understand a lot. Review the hints and try again to get a perfect score."
+    :"Keep practicing! Read the sentences carefully, look for context clues, and try again. ¡Tú puedes!";
+}
+
+$("go").onclick=()=>{
+  if(!checked){if(sel)check();}
+  else if(i<DATA.length-1){i++;show();}
+  else finish();
+};
+$("again").onclick=()=>{i=0;score=0;$("end").classList.add("hidden");$("quiz").classList.remove("hidden");show();};
+show();
+</script>
+</body>
+</html>
